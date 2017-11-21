@@ -1,0 +1,117 @@
+<script src="javascripts/theme.min.js"></script>
+<script src="javascripts/jquery.2.2.4.min.js"></script>
+<script src="javascripts/jquery.j-pro.min.js"></script>
+<script src="javascripts/jquery.ui.min.js"></script>
+<script src="javascripts/wickedpicker.js"></script>
+<script src="javascripts/validation.min.js"></script>
+
+<script type="text/javascript">
+    var oxyThemeData = {
+        navbarHeight: 100,
+        navbarScrolled: 60,
+        navbarScrolledPoint: 20,
+        menuClose: 'off',
+        scrollFinishedMessage: 'No more items to load.',
+        hoverMenu:
+        {
+            hoverActive: false,
+            hoverDelay: 1,
+            hoverFadeDelay: 200
+        },
+        siteLoader: 'on'
+    };
+    $(document).ready(function(){
+        $("#login").validate();
+
+        <%if (page_id == "home") {%>
+        $("#service").autocomplete({
+            source: ['Carpenter','Beautician','Plumber','Painter','Stone Mason'],
+            messages: {
+                noResults:''
+            }
+        });
+        <%} else if (page_id == "patients") {%>
+        $("#contact").validate();
+
+        var availableTags = [
+          "ActionScript",
+          "AppleScript",
+          "Asp",
+          "BASIC",
+          "C",
+          "C++",
+          "Clojure",
+          "COBOL",
+          "ColdFusion",
+          "Erlang",
+          "Fortran",
+          "Groovy",
+          "Haskell",
+          "Java",
+          "JavaScript",
+          "Lisp",
+          "Perl",
+          "PHP",
+          "Python",
+          "Ruby",
+          "Scala",
+          "Scheme"
+        ];
+
+        function split( val ) {
+          return val.split( /,\s*/ );
+        }
+
+        function extractLast( term ) {
+          return split( term ).pop();
+        }
+     
+        $( "#symptoms" )
+          // don't navigate away from the field on tab when selecting an item
+          .on( "keydown", function( event ) {
+            if ( event.keyCode === $.ui.keyCode.TAB &&
+                $( this ).autocomplete( "instance" ).menu.active ) {
+              event.preventDefault();
+            }
+          })
+          .autocomplete({
+            minLength: 0,
+            source: function( request, response ) {
+              // delegate back to autocomplete, but extract the last term
+              response( $.ui.autocomplete.filter(
+                availableTags, extractLast( request.term ) ) );
+            },
+            focus: function() {
+              // prevent value inserted on focus
+              return false;
+            },
+            select: function( event, ui ) {
+              var terms = split( this.value );
+              // remove the current input
+              terms.pop();
+              // add the selected item
+              terms.push( ui.item.value );
+              // add placeholder to get the comma-and-space at the end
+              terms.push( "" );
+              this.value = terms.join( ", " );
+              return false;
+            }
+          });
+
+        $( "#date" ).datepicker({
+            dateFormat: "mm/dd/yy",
+            prevText: '<i class="fa fa-caret-left"></i>',
+            nextText: '<i class="fa fa-caret-right"></i>',
+        });
+        $("#location").autocomplete({
+            source: [
+                "Kolkata",
+                "Allahabad"
+            ],
+            messages: {
+                noResults:''
+            }
+        });
+        <%} %>
+    });
+</script>

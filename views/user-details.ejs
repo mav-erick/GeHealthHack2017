@@ -1,0 +1,115 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<% include layouts/head  %>
+<link rel="stylesheet" href="stylesheets/wickedpicker.css">
+
+<body class="transparent-header pace-on pace-dot">
+   	<% include layouts/header %>
+   	<div id="content" role="main">
+   	<article>
+            <section class="section" id="home">
+                <div class="background-media" data-0-top-bottom="background-position: 50% 50px" data-start="background-position: 50% -31px" style="background-image: url(images/creative/bg-01.jpg); background-repeat:no-repeat; background-size:cover; background-attachment:fixed; background-position: 50% 0%;">
+                </div>
+                <div class="background-overlay" style="background-color: rgba(86,154,167,0.7);"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                        	<div class="row text-center element-top-120 element-bottom-20 os-animation normal light" data-os-animation="fadeIn" data-os-animation-delay="0.2s">
+                        		<div class="col-md-2 col-xs-2"></div>
+                                <div class="col-md-8 col-xs-8">
+                                    <img src="/images/creative/Z.png"/>
+	                        		<img src="/images/creative/U.png"/>
+	                        		<img src="/images/creative/L.png"/>
+	                        		<img src="/images/creative/U.png"/>
+                                </div>
+                                <div class="col-md-2 col-xs-2"></div>	
+                            </div>
+                            <div class="divider-border divider-border-center element-top-20 element-bottom-20 os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.2s">
+                                <div class="divider-border-inner" style="background:rgba(255, 255, 255, 0.87);"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <h2 class="text-center element-top-0 element-bottom-40 text-light os-animation normal light" data-os-animation="fadeIn" data-os-animation-delay="0.3s">Sign up now and avail great offers !!</h2>
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+            	<div class="j-wrapper j-wrapper-640">
+                    <form action="user-details" method="post" class="j-pro" id="signup" novalidate>
+
+                        <div class="j-content">
+
+                            <div class="j-divider-text j-gap-top-20 j-gap-bottom-45">
+                                <span class="">Personal Details</span>
+                            </div>
+
+                            <!-- start First name Last name-->
+                            <div class="j-unit">
+                                <label class="j-label">Name</label>
+                                <div class="j-input">
+                                    <label class="j-icon-right" for="name">
+                                        <i class="fa fa-user"></i>
+                                    </label>
+                                    <input type="text" name="name" id="name" required>
+                                </div>
+                            </div>
+                            <!-- end First name Last name -->
+
+                            <!-- start email -->
+                            <div class="j-unit">
+                                <label class="j-label">Email</label>
+                                <div class="j-input">
+                                    <label class="j-icon-right" for="email">
+                                        <i class="fa fa-envelope-o"></i>
+                                    </label>
+                                    <input type="text" name="email" id="email" required>
+                                </div>
+                            </div>
+                            <!-- end email -->
+
+                            <div class="j-unit">
+                                <label class="j-label">Hospital Name</label>
+                                <div class="j-input">
+                                    <label class="j-icon-right" for="email">
+                                        <i class="fa fa-envelope-o"></i>
+                                    </label>
+                                    <input type="text" name="hospital" id="hospital" required>
+                                </div>
+                            </div>
+
+                            <div class="j-unit">
+                                <label class="j-label">Designation</label>
+                                <div class="j-input">
+                                    <label class="j-icon-right" for="email">
+                                        <i class="fa fa-envelope-o"></i>
+                                    </label>
+                                    <input type="text" name="designation" id="designation" required>
+                                </div>
+                            </div>
+                            <!-- start response from server -->
+                            <div class="j-response"></div>
+                            <!-- end response from server -->
+
+                        </div>
+                        <!-- end /.content -->
+
+                        <div class="j-footer text-center">
+                            <button type="submit" class="btn btn-lg">Proceed</button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </section>
+        </article>
+   	</div>
+   	<% include layouts/footer %>
+    <a class="go-top go-top-circle" href="javascript:void(0)"> <i class="fa fa-angle-up"></i> </a>
+	<% include layouts/javascripts %>
+</body>

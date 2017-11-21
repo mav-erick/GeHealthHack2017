@@ -1,0 +1,141 @@
+<div class="pace-overlay"></div>
+<div class="menu navbar navbar-static-top header-logo-left-menu-right text-none oxy-mega-menu navbar-sticky" id="masthead">
+    <div class="container">
+        <div class="navbar-header"> <button class="navbar-toggle collapsed" data-target=".main-navbar" data-toggle="collapse" type="button">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+            <a class="navbar-brand" href="/"><img src="images/creative/lambda-medical-white.png" alt="Lambda">Lambda</a>
+        </div>
+        <div class="nav-container">
+            <nav class="collapse navbar-collapse main-navbar logo-navbar navbar-right">
+                <div class="menu-container">
+                    <ul class="nav navbar-nav" id="menu-main">
+                        <li class="menu-item"> 
+                        <% if (page_id == "home") {%>
+                        <a href="#home"> 
+                        <%} else {%>
+                        <a href="/">
+                        <%}%>
+                        Home</a></li>
+                        <li class="menu-item  dropdown menu-item-object-oxy_mega_menu"> <a class="dropdown-toggle" data-toggle="dropdown" href="index.html#">Diseases</a>
+                            <ul class="dropdown-menu dropdown-menu-left row">
+                                <li class="menu-item menu-item-object-oxy_mega_columns menu-item-has-children dropdown-submenu dropdown col-md-4"> <strong>Handyman Services</strong>
+                                    <ul class="dropdown-menu-left">
+                                        <li class="menu-item"> <a href="creative-elements-basic-type.html">Basic Type</a> </li>
+                                        <li class="menu-item"> <a href="creative-elements-blockquotes.html">Blockquotes</a> </li>
+                                        <li class="menu-item"> <a href="creative-elements-font-icons.html">Font Icons</a> </li>
+                                        <li class="menu-item"> <a href="creative-elements-columns.html">Columns</a> </li>
+                                        <li class="menu-item"> <a href="creative-elements-jumbotron.html">Jumbotron</a> </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item menu-item-object-oxy_mega_columns menu-item-has-children dropdown-submenu dropdown col-md-4"> <strong>Professional Services</strong>
+                                    <ul class="dropdown-menu-left">
+                                        <li class="menu-item"> <a href="creative-elements-accordions.html">Accordions</a> </li>
+                                        <li class="menu-item"> <a href="creative-elements-tabs.html">Tabs</a> </li>
+                                        <li class="menu-item"> <a href="creative-elements-buttons.html">Buttons</a> </li>
+                                        <li class="menu-item"> <a href="creative-elements-panels.html">Panels</a> </li>
+                                        <li class="menu-item"> <a href="creative-elements-tables.html">Tables</a> </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item menu-item-object-oxy_mega_columns menu-item-has-children dropdown-submenu dropdown col-md-4"> <strong>Launching Soon</strong>
+                                    <ul class="dropdown-menu-left">
+                                        <li class="menu-item"> <a href="creative-elements-accordions.html">Accordions</a> </li>
+                                        <li class="menu-item"> <a href="creative-elements-tabs.html">Tabs</a> </li>
+                                        <li class="menu-item"> <a href="creative-elements-buttons.html">Buttons</a> </li>
+                                        <li class="menu-item"> <a href="creative-elements-panels.html">Panels</a> </li>
+                                        <li class="menu-item"> <a href="creative-elements-tables.html">Tables</a> </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item  dropdown "> <a href="/patients">Patients</a></li>
+                        <li class="menu-item  dropdown "> <a href="/about">About us</a></li>
+                        <li class="menu-item  dropdown "> <a href="/contact">Contact us</a></li>
+                        
+                        <% if(page_id != 'signup') {
+                            if (user) { 
+                                if(user.name) {%>
+                        <li class="menu-item  dropdown "> <a class="dropdown-toggle" data-toggle="dropdown" href="index.html#"> <%= user.name %></a>
+                            <%} else {%>
+                            <li class="menu-item  dropdown "> <a class="dropdown-toggle" data-toggle="dropdown" href="index.html#"> <%= user.username %></a>
+                        <% } %>
+                            <ul class="dropdown-menu dropdown-menu-left ">
+                                <li class="menu-item"> <a href="creative-blog-right-sidebar.html">Right Sidebar</a> </li>
+                                <li class="menu-item"> <a href="creative-blog.html">No Sidebar</a> </li>
+                                <li class="menu-item"> <a href="creative-blog-left-sidebar.html">Left Sidebar</a> </li>
+                                <li class="menu-item"> <a href="creative-blog-masonry.html">Masonry</a> </li>
+                                <li class="menu-item"> <a href="creative-post.html">Normal Post</a> </li>
+                                <li class="menu-item"> <a href="creative-gallery-post.html">Gallery Post</a> </li>
+                                <li role="separator" class="divider"></li>
+                                <li class="menu-item"> <a href="/logout">Logout</a> </li>
+                            </ul>
+                        </li>
+                        <% } else { %> 
+                        <li class="menu-item" > <a data-toggle="modal" data-target="#myModal" id="clickme">Log in</a> </li>
+                        <% } 
+                        } else {%>
+                        <li class="menu-item" > <a href='/' >Signed Up ?</a> </li>
+                        <% } %>
+                    </ul>
+                </div>
+                <div class="menu-sidebar">
+                    <div class="sidebar-widget widget_search" id="search-5">
+                        <form action="http://lambdahtml.oxygenna.com/creative-index.html" method="get" name="searchform">
+                            <div class="input-group"> <input class="form-control" name="s" placeholder="Search" type="text"> 
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="submit" value="Search">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span> 
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<%if (page_id != 'signup') {%>
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="j-wrapper j-wrapper-640">
+
+            <form action="/login" method="post" class="j-pro" id="login" novalidate>
+                <div class="j-content">
+
+                    <div class="j-divider-text j-gap-top-20 j-gap-bottom-45">
+                        <span class="">Login Details</span>
+                    </div>
+
+                    <div class="j-unit">
+                        <label class="j-label">Email or Phone Number</label>
+                        <div class="j-input">
+                            <label class="j-icon-right" for="username">
+                                <i class="fa fa-mobile-phone"></i>
+                            </label>
+                            <input type="text" name="username" required>
+                        </div>
+                    </div>
+                    <!-- end email -->
+
+                    <div class="j-unit">
+                        <label class="j-label">Password</label>
+                        <div class="j-input">
+                            <label class="j-icon-right" for="password">
+                                <i class="fa fa-lock"></i>
+                            </label>
+                            <input type="password" name="password"  required>
+                        </div>
+                    </div>
+                </div>
+                <div class="j-footer text-center element-top-10 element-bottom-10">
+                    <a href="/signup" class="btn btn-danger btn-lg">Signup</a>
+                    <button type="submit" class="btn btn-primary btn-lg">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<% } %>

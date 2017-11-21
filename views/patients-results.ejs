@@ -1,0 +1,68 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<% include layouts/head  %>
+<link rel="stylesheet" href="stylesheets/wickedpicker.css">
+
+<body class="transparent-header pace-on pace-dot">
+   	<% include layouts/header %>
+   	<div id="content" role="main">
+   	<article>
+            <section class="section" id="home">
+                <div class="background-media" data-0-top-bottom="background-position: 50% 50px" data-start="background-position: 50% -31px" style="background-image: url(images/creative/bg-01.jpg); background-repeat:no-repeat; background-size:cover; background-attachment:fixed; background-position: 50% 0%;">
+                </div>
+                <div class="background-overlay" style="background-color: rgba(86,154,167,0.7);"></div>
+                <div class="container">
+                     <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <h2 class="text-center element-top-120 element-bottom-40 text-light os-animation normal light" data-os-animation="fadeIn" data-os-animation-delay="0.3s">Similar patients profile</h2>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                        	<div class="row text-center element-top-20 element-bottom-20 os-animation normal light" data-os-animation="fadeIn" data-os-animation-delay="0.2s">
+                        		<div class="portfolio-container element-top-20 element-bottom-80">
+                                <%for (var i = 0; i < 4; i++) { %>
+                                    <div class="col-md-3" data-os-animation="none" data-os-animation-delay="0s">
+                                        <article id="post-140" class="post-grid element-bottom-20 text-left">
+                                            <div class="post-grid-content">
+                                                <h3 class="post-grid-content-title"> <a>
+                                                    patients[i].name
+                                                </a> </h3>
+                                                <p> <%=patients[i]%> </p>
+                                            </div>
+                                        </article>
+                                    </div>
+                                <%}%>    
+                                </div>	
+                            </div>
+                            <div class="divider-border divider-border-center element-top-20 element-bottom-20 os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.2s">
+                                <div class="divider-border-inner" style="background:rgba(255, 255, 255, 0.87);"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <h3> Disease based Information </h3>
+                        <%for (var i = 0; i < 3; i++) { %>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <article id="post-143" class="post-grid element-top-30 element-bottom-20">
+                                <p>
+                                    <%- JSON.stringify(diseases[i]) %>
+                                </p>
+                                
+                                </article>
+                            </div>
+                        </div>
+                        <%}%>
+                    </div>
+                </div>
+            </section>
+        </article>
+   	</div>
+   	<% include layouts/footer %>
+    <a class="go-top go-top-circle" href="javascript:void(0)"> <i class="fa fa-angle-up"></i> </a>
+	<% include layouts/javascripts %>
+</body>

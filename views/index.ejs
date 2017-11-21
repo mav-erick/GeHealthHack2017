@@ -1,0 +1,362 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<% include layouts/head  %>
+<body class="transparent-header pace-on pace-dot">
+   	<% include layouts/header %>
+    <div id="content" role="main">
+        <article>
+            <section class="section" id="home">
+                <div class="background-media"> <video autoplay="autoplay" class="section-background-video" loop="loop" poster="assets/images/medical/img5-notinclude.jpg" style="width: 100%; height: 100%;">
+                    <source src="http://theme-background-videos.s3.amazonaws.com/doctors-1.mp4" type="video/mp4">
+                    <source src="http://theme-background-videos.s3.amazonaws.com/doctors-1.webm" type="video/webm"></video> 
+                </div>
+                <div class="background-overlay" style="background-color: rgba(86,154,197,0.7);"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <article id="post-143" class="post-grid element-top-160 element-bottom-20">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="post-grid-content">
+                                            <h3 class="post-grid-content-title"> <a href="">Trending Articles</a> </h3>
+                                            <%for (var i = 0; i < 14; i+=2) { %>
+                                                <p>
+                                                    <a href="<%= trending[i + 1]%>"><%=trending[i]%></a>
+                                                </p>
+                                            <%}%>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="post-grid-content">
+                                            <h3 class="post-grid-content-title"> <a href="">Latest News</a> </h3>
+                                            
+                                            <%for (var i = 0; i < 10; i+=2) { %>
+                                                <p>
+                                                    <a href="<%= trending[i + 1]%>"><%=news[i]%></a>
+                                                </p>
+                                            <%}%>
+                                        </div>
+                                    </div>
+                                </div>   
+                            </article>
+                        </div>
+                        <div class="col-md-6">
+                            <h1 class="text-center element-top-160 element-bottom-40 text-light os-animation bigger default" data-os-animation="fadeIn" data-os-animation-delay="0.1s">Lambda</h1>
+                            <div class="divider-border divider-border-center element-top-20 element-bottom-20 os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.2s">
+                                <div class="divider-border-inner" style="background:rgba(255, 255, 255, 0.87);"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                    <h2 class="text-center element-top-0 element-bottom-40 text-light os-animation normal light" data-os-animation="fadeIn" data-os-animation-delay="0.3s">Contextual Learning Platform</h2>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                <form action="/search-results" method="post">
+                                    <input id="service" class="text-center element-top-40 element-bottom-180 text-light os-animation normal light" type="text" name="search" placeholder="Search for diseases, symptoms, patients, etc" style="all:unset;width:100%; height:50px; color:black; font-size:18px;background: white;" x-webkit-speech> 
+                                </form>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                            <a href="#trending" class="scroll-to scroll-to-id  element-top-20 element-bottom-40 text-light os-animation place-bottom fadeIn" data-os-animation="fadeIn" data-os-animation-delay="0.1s">
+                            <i class="fa fa-angle-down"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section" id="trending">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="text-center element-top-80 element-bottom-20 os-animation normal default" data-os-animation="fadeIn" data-os-animation-delay="0.1s">Trending</h1>
+                            <div class="divider-border divider-border-center element-top-20 element-bottom-20 os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.2s">
+                                <div class="divider-border-inner"></div>
+                            </div>
+                            
+                            <div class="portfolio-container element-top-20 element-bottom-80">
+                                
+                                <%
+                                var j = 0; 
+                                for (var i = 0; i < 24; i+=2) { 
+                                    j+=2;
+                                    if (j % 8 == 0) {
+                                %>
+                                <div class=" element-top-20 element-bottom-20 recent-simple-os-container row">
+                                <%}%>    
+                                    <div class="col-md-3" data-os-animation="none" data-os-animation-delay="0s">
+                                        
+                                    <h3 > <a href="<%= stats[i + 1]%>">
+                                    <%=stats[i]%>            
+                                            </a> </h3>
+                                    </div>
+                                <%if (j % 8 == 0) {%>
+                                </div>
+                                <%}}%> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="background-media" data-0-top-bottom="background-position: 50% 50px" data-start="background-position: 50% -50px" style="background-image: url(images/creative/bg-02.jpg); background-repeat:no-repeat; background-size:cover; background-attachment:fixed; background-position: 50% 0%;">
+                </div>
+                <div class="background-overlay" style="background-color: rgba(86,154,167,0.85);"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="text-center element-top-80 element-bottom-0 text-light os-animation normal default" data-os-animation="fadeIn" data-os-animation-delay="0.1s">Recommended</h1>
+                            <div class="divider-border divider-border-center element-top-20 element-bottom-20 os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.2s">
+                                <div class="divider-border-inner" style="background:rgba(255, 255, 255, 0.87);"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <h2 class="text-center element-top-0 element-bottom-40 text-light os-animation normal light" data-os-animation="fadeIn" data-os-animation-delay="0.3s">These recommendations are based on your past activities.</h2>
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                            <div class="portfolio-container element-top-20 element-bottom-80">
+                                <div class=" element-top-20 element-bottom-20 recent-simple-os-container row">
+                                    <div class="col-md-4" data-os-animation="none" data-os-animation-delay="0s">
+                                        <article id="post-143" class="post-grid element-bottom-20 text-left">
+                                            <div class="post-grid-content">
+                                                <h3 class="post-grid-content-title"> <a href="corporate-standard-post.html">
+                                                The know how of branding
+                                            </a> </h3>
+                                                <p> Lisa, vampires are make-believe, like elves, gremlins, and Eskimos. We started out like Romeo and Juliet, but it ended up in tragedy. Attempted murder? </p>
+                                                <div class="post-grid-content-footer"> Langan John , September 25, 2014 </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-4" data-os-animation="none" data-os-animation-delay="0s">
+                                        <article id="post-143" class="post-grid element-bottom-20 text-left">
+                                            <div class="post-grid-content">
+                                                <h3 class="post-grid-content-title"> <a href="corporate-standard-post.html">
+                                                The know how of branding
+                                            </a> </h3>
+                                                <p> Lisa, vampires are make-believe, like elves, gremlins, and Eskimos. We started out like Romeo and Juliet, but it ended up in tragedy. Attempted murder? </p>
+                                                <div class="post-grid-content-footer"> Langan John , September 25, 2014 </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-4" data-os-animation="none" data-os-animation-delay="0s">
+                                        <article id="post-143" class="post-grid element-bottom-20 text-left">
+                                            <div class="post-grid-content">
+                                                <h3 class="post-grid-content-title"> <a href="corporate-standard-post.html">
+                                                The know how of branding
+                                            </a> </h3>
+                                                <p> Lisa, vampires are make-believe, like elves, gremlins, and Eskimos. We started out like Romeo and Juliet, but it ended up in tragedy. Attempted murder? </p>
+                                                <div class="post-grid-content-footer"> Langan John , September 25, 2014 </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class=" element-top-20 element-bottom-20 recent-simple-os-container row">
+                                    <div class="col-md-4" data-os-animation="none" data-os-animation-delay="0s">
+                                        <article id="post-143" class="post-grid element-bottom-20 text-left">
+                                            <div class="post-grid-content">
+                                                <h3 class="post-grid-content-title"> <a href="corporate-standard-post.html">
+                                                The know how of branding
+                                            </a> </h3>
+                                                <p> Lisa, vampires are make-believe, like elves, gremlins, and Eskimos. We started out like Romeo and Juliet, but it ended up in tragedy. Attempted murder? </p>
+                                                <div class="post-grid-content-footer"> Langan John , September 25, 2014 </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-4" data-os-animation="none" data-os-animation-delay="0s">
+                                        <article id="post-143" class="post-grid element-bottom-20 text-left">
+                                            <div class="post-grid-content">
+                                                <h3 class="post-grid-content-title"> <a href="corporate-standard-post.html">
+                                                The know how of branding
+                                            </a> </h3>
+                                                <p> Lisa, vampires are make-believe, like elves, gremlins, and Eskimos. We started out like Romeo and Juliet, but it ended up in tragedy. Attempted murder? </p>
+                                                <div class="post-grid-content-footer"> Langan John , September 25, 2014 </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-4" data-os-animation="none" data-os-animation-delay="0s">
+                                        <article id="post-143" class="post-grid element-bottom-20 text-left">
+                                            <div class="post-grid-content">
+                                                <h3 class="post-grid-content-title"> <a href="corporate-standard-post.html">
+                                                The know how of branding
+                                            </a> </h3>
+                                                <p> Lisa, vampires are make-believe, like elves, gremlins, and Eskimos. We started out like Romeo and Juliet, but it ended up in tragedy. Attempted murder? </p>
+                                                <div class="post-grid-content-footer"> Langan John , September 25, 2014 </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="background-overlay "></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="text-center element-top-70 os-animation normal" data-os-animation="fadeIn" data-os-animation-delay="0s"> Patient Profiles </h1>
+                            <div class="divider-border divider-border-center element-top-10 element-bottom-10 os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.1s" style="height:3px;">
+                                <div class="divider-border-inner" style="width:60px;"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <h2 class="text-center center element-top-0 element-bottom-40 os-animation light" data-os-animation="fadeIn" data-os-animation-delay="0.2s"> These are the patients profiles that are studied the most. </h2>
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                            <div class="row staff-list-container list-container element-bottom-60">
+                                <div class="figure col-md-3 fade-in element-bottom-20 figcaption-bottom text-left fade-in os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.1s">
+                                    <div class="figure-image"> <img src="images/creative/team04-notinclude.jpg" alt="Shirley King">
+                                        <div class="figure-overlay ">
+                                            <div class="figure-overlay-container">
+                                                <div class="figure-caption text-center">
+                                                    <ul class="figure-overlay-icons social-icons social-simple">
+                                                        <li>
+                                                            <a href="#" target="_self"> <i class="fa fa-facebook"></i> </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" target="_self"> <i class="fa fa-twitter"></i> </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" target="_self"> <i class="fa fa-dribbble"></i> </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" target="_self"> <i class="fa fa-behance"></i> </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="figure-caption text-left">
+                                        <h3 class="figure-caption-title"> <strong>Shirley King</strong> <span>Designer</span> </h3>
+                                        <p class="figure-caption-description"> Objectively innovate empowered manufactured products whereas parallel platforms. Holisticly testing procedures. </p>
+                                    </div>
+                                </div>
+                                <div class="figure col-md-3 fade-in element-bottom-20 figcaption-bottom text-left fade-in os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.2s">
+                                    <div class="figure-image"> <img src="images/creative/team02-notinclude.jpg" alt="Dorothy Lewis">
+                                        <div class="figure-overlay ">
+                                            <div class="figure-overlay-container">
+                                                <div class="figure-caption text-center">
+                                                    <ul class="figure-overlay-icons social-icons social-simple">
+                                                        <li>
+                                                            <a href="#" target="_self"> <i class="fa fa-facebook"></i> </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" target="_self"> <i class="fa fa-twitter"></i> </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" target="_self"> <i class="fa fa-behance"></i> </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" target="_self"> <i class="fa fa-dribbble"></i> </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="figure-caption text-left">
+                                        <h3 class="figure-caption-title"> <strong>Dorothy Lewis</strong> <span>Designer</span> </h3>
+                                        <p class="figure-caption-description"> Phosfluorescently engage worldwide methodologies with web-enabled technology. Interactively coordinate. </p>
+                                    </div>
+                                </div>
+                                <div class="figure col-md-3 fade-in element-bottom-20 figcaption-bottom text-left fade-in os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.3s">
+                                    <div class="figure-image"> <img src="images/creative/team09-notinclude.jpg" alt="Carl  Barnes">
+                                        <div class="figure-overlay ">
+                                            <div class="figure-overlay-container">
+                                                <div class="figure-caption text-center">
+                                                    <ul class="figure-overlay-icons social-icons social-simple">
+                                                        <li>
+                                                            <a href="#" target="_self"> <i class="fa fa-facebook"></i> </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" target="_self"> <i class="fa fa-behance"></i> </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" target="_self"> <i class="fa fa-dribbble"></i> </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" target="_self"> <i class="fa fa-twitter"></i> </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="figure-caption text-left">
+                                        <h3 class="figure-caption-title"> <strong>Carl Barnes</strong> <span>Designer</span> </h3>
+                                        <p class="figure-caption-description"> Interactively procrastinate high-payoff content without backward-compatible data. Quickly cultivate processes. </p>
+                                    </div>
+                                </div>
+                                <div class="figure col-md-3 fade-in element-bottom-20 figcaption-bottom text-left fade-in os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.4s">
+                                    <div class="figure-image"> <img src="images/creative/team13-notinclude.jpg" alt="Joe Ross">
+                                        <div class="figure-overlay ">
+                                            <div class="figure-overlay-container">
+                                                <div class="figure-caption text-center">
+                                                    <ul class="figure-overlay-icons social-icons social-simple">
+                                                        <li>
+                                                            <a href="#" target="_self"> <i class="fa fa-dribbble"></i> </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" target="_self"> <i class="fa fa-behance"></i> </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" target="_self"> <i class="fa fa-twitter"></i> </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="figure-caption text-left">
+                                        <h3 class="figure-caption-title"> <strong>Joe Ross</strong> <span>Designer</span> </h3>
+                                        <p class="figure-caption-description"> Synergistically evolve 2.0 technologies rather than just in time initiatives. Quickly deploy strategic networks. </p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="background-media" data-0-top-bottom="background-position: 50% 50px" data-start="background-position: 50% -31px" style="background-image: url(images/creative/bg-01.jpg); background-repeat:no-repeat; background-size:cover; background-attachment:fixed; background-position: 50% 0%;">
+                </div>
+                <div class="background-overlay" style="background-color: rgba(86,154,167,0.7);"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8 text-center">
+                                    <h2 class="text-center element-top-80 element-bottom-20 text-light os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.1s">The most advanced, flexible and awesome theme you’ve ever seen. Need more? Feel free to contact us.</h2>
+                                    <div class="divider-border divider-border-center element-top-20 element-bottom-20 os-animation" data-os-animation="fadeIn"
+                                        data-os-animation-delay="0.2s">
+                                        <div class="divider-border-inner" style="background:rgba(255, 255, 255, 0.9);"></div>
+                                    </div> <a class="btn btn-link btn-lg text-light element-top-0 element-bottom-80 os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.4s" href="http://themeforest.net/item/lambda-multi-purpose-bootstrap-html-template/10465708?ref=oxygenna"
+                                        target="_self">let's work together</a> </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+        <% include layouts/footer %>
+    </div>
+    
+    <a class="go-top go-top-circle" href="javascript:void(0)"> <i class="fa fa-angle-up"></i> </a>
+
+    <% include layouts/javascripts %>
+</body>
+
+
+</html>

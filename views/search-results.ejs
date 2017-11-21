@@ -1,0 +1,71 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<% include layouts/head  %>
+<link rel="stylesheet" href="stylesheets/wickedpicker.css">
+
+<body class="transparent-header pace-on pace-dot">
+   	<% include layouts/header %>
+   	<div id="content" role="main">
+		<article>
+	        <section class="section">
+	            <div class="background-media" data-0-top-bottom="background-position: 50% -80px" data-start="background-position: 50% 0px" style="background-image: url(images/creative/p13.jpg); background-repeat:no-repeat; background-size:cover; background-attachment:fixed; background-position: 50% 0%;">
+	            </div>
+	            <div class="background-overlay" style="background-color: rgba(0,0,0,0.3);"></div>
+	            <div class="container">
+	                <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                        <form action="/search-results" method="post">
+                            <input id="service" class="text-center element-top-140 element-bottom-30 text-light os-animation normal light" type="text" name="search" placeholder="Search for diseases, symptoms, patients, etc" style="all:unset;width:100%; height:50px; color:black; font-size:18px;background: white;" x-webkit-speech> 
+                        </form>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+	            </div>
+	            <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <article id="post-143" class="post-grid element-top-30 element-bottom-20">
+                            <p>
+                            	<%-links[0]%>
+                            </p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+	        </section>
+	        <section>
+	        	<div class="portfolio-container element-top-20 element-bottom-80">
+		        	<%
+		        	var j = 1; 
+		        	for (var i = 1; i < links.length; i+=2) { 
+		        		j+=2;
+		        		if (j % 6 == 0) {
+		        	%>
+			        <div class=" element-top-20 element-bottom-20 recent-simple-os-container row">
+		            <%}%>
+		                <div class="col-md-4" data-os-animation="none" data-os-animation-delay="0s">
+		                    <article id="post-143" class="post-grid element-bottom-20 text-left">
+		                        <div class="post-grid-content">
+		                            <h3 class="post-grid-content-title"> <a href="<%=links[i + 1]%>">
+		                            <%=links[i]%>
+		                        </a> </h3>
+		                        </div>
+		                    </article>
+		                </div>
+		            <%if (j % 6 == 0) {%>
+		            </div>
+		            <%}}%>
+		        </div>
+			</section>
+		</article>
+	</div>
+    <% include layouts/footer %>
+
+    <a class="go-top go-top-circle" href="javascript:void(0)"> <i class="fa fa-angle-up"></i> </a>
+
+	<% include layouts/javascripts %>
+</body>
+
+</html>

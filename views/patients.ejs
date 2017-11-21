@@ -1,0 +1,189 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<% include layouts/head  %>
+<link rel="stylesheet" href="stylesheets/wickedpicker.css">
+
+<body class="transparent-header pace-on pace-dot">
+   	<% include layouts/header %>
+   	<div id="content" role="main">
+   	<article>
+            <section class="section" id="home">
+                <div class="background-media" data-0-top-bottom="background-position: 50% 50px" data-start="background-position: 50% -31px" style="background-image: url(images/creative/bg-01.jpg); background-repeat:no-repeat; background-size:cover; background-attachment:fixed; background-position: 50% 0%;">
+                </div>
+                <div class="background-overlay" style="background-color: rgba(86,154,167,0.7);"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                        	<div class="row text-center element-top-120 element-bottom-20 os-animation normal light" data-os-animation="fadeIn" data-os-animation-delay="0.2s">
+                        		<div class="col-md-2 col-xs-2"></div>
+                                <div class="col-md-8 col-xs-8">
+                                    <img src="/images/creative/L.png"/>
+	                        		<img src="/images/creative/A.png"/>
+	                        		<img src="/images/creative/M.png"/>
+	                        		<img src="/images/creative/B.png"/>
+                                    <img src="/images/creative/D.png"/>
+                                    <img src="/images/creative/A.png"/>
+                                </div>
+                                <div class="col-md-2 col-xs-2"></div>	
+                            </div>
+                            <div class="divider-border divider-border-center element-top-20 element-bottom-20 os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.2s">
+                                <div class="divider-border-inner" style="background:rgba(255, 255, 255, 0.87);"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <h2 class="text-center element-top-0 element-bottom-40 text-light os-animation normal light" data-os-animation="fadeIn" data-os-animation-delay="0.3s">Obtain resources based on patients profile</h2>
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+            	<div class="j-wrapper j-wrapper-640">
+                    <form action="/patients" method="post" class="j-pro" id="contact" novalidate>
+
+                        <!-- end /.j-header-->
+
+                        <div class="j-content">
+
+                            <div class="j-divider-text j-gap-top-20 j-gap-bottom-45">
+                                <span>Patient Profile</span>
+                            </div>
+
+                            <!-- start First name Last name-->
+                            <div class="j-unit">
+                                <label class="j-label">Name</label>
+                                <div class="j-input">
+                                    <label class="j-icon-right" for="name">
+                                        <i class="fa fa-user"></i>
+                                    </label>
+                                    <input type="text" id="name" name="name">
+                                </div>
+                            </div>
+                            <div class="j-row">
+                                <div class="j-span6 j-unit">
+                                    <div class="j-input">
+                                        <label class="j-icon-right" for="age">
+                                            <i class="fa fa-child"></i>
+                                        </label>
+                                        <input type="text" id="age" name="age" placeholder="age">
+                                    </div>
+                                </div>
+                                <div class="j-span6 j-unit">
+                                    <div class="j-input">
+                                        <label class="j-icon-right" for="gender">
+                                            <i class="fa fa-neuter"></i>
+                                        </label>
+                                        <input type="text" id="gender" name="gender" placeholder="gender" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="j-row">
+                                <div class="j-span6 j-unit">
+                                    <div class="j-input">
+                                        <label class="j-icon-right" for="bp">
+                                            <i class="fa fa-level-up"></i>
+                                        </label>
+                                        <input type="text" id="bp" name="bp" placeholder="Blood Pressure">
+                                    </div>
+                                </div>
+                                <div class="j-span6 j-unit">
+                                    <div class="j-input">
+                                        <label class="j-icon-right" for="bmi">
+                                            <i class="fa fa-tachometer"></i>
+                                        </label>
+                                        <input type="text" id="bmi" name="bmi" placeholder="BMI">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="j-unit">
+                                <label class="j-label">Date of Admission/Visit</label>
+                                <div class="j-input">
+                                    <label class="j-icon-right" for="date">
+                                        <i class="fa fa-calendar"></i>
+                                    </label>
+                                    <input type="text" id="date" name="date">
+                                </div>
+                            </div>
+                            <div class="j-unit">
+                                <label class="j-label">Your Location</label>
+                                <div class="j-input">
+                                    <label class="j-icon-right" for="location">
+                                        <i class="fa fa-location-arrow"></i>
+                                    </label>
+                                    <input type="text" name="location" id="location" required>
+                                </div>
+                            </div>
+
+                            <div class="j-unit">
+                                <label class="j-label">Habits</label>
+                                <div class="j-input">
+                                    <input type="text" name="habits"></textarea>
+                                </div>
+                            </div>
+                            <!-- end email -->
+                        </div>
+                        <div class="j-content">
+                            <div class="j-divider-text j-gap-top-20 j-gap-bottom-45">
+                                <span>Patient Disease Profile </span>
+                            </div>
+                        
+                            <!-- start message -->
+                            <div class="j-unit">
+                                <label class="j-label">Signs and Symptoms</label>
+                                <div class="j-input">
+                                    <input type="text" name="symptoms" id="symptoms" required></textarea>
+                                </div>
+                            </div>
+                            <div class="j-unit">
+                                <label class="j-label">Family Health History</label>
+                                <div class="j-input">
+                                    <input type="text" name="history"></textarea>
+                                </div>
+                            </div>
+                            <div class="j-unit">
+                                <label class="j-label">Known Illnesses</label>
+                                <div class="j-input">
+                                    <input type="text" name="illnesses"></textarea>
+                                </div>
+                            </div>
+                            <div class="j-unit">
+                                <label class="j-label">Lab Tests</label>
+                                <div class="j-input">
+                                    <input type="text" name="tests"></textarea>
+                                </div>
+                            </div>
+                            <div class="j-unit">
+                                <label class="j-label">Diagnosis</label>
+                                <div class="j-input">
+                                    <input type="text" name="diagnosis"></textarea>
+                                </div>
+                            </div>.
+                            <div class="j-unit">
+                                <label class="j-label">Treatment</label>
+                                <div class="j-input">
+                                    <input type="text" name="treatment"></textarea>
+                                </div>
+                            </div>
+                            <!-- end message -->
+                        </div>
+                        <!-- end /.content -->
+
+                        <div class="j-footer text-center">
+                            <button type="submit" class="btn btn-lg">Query</button>
+                        </div>
+                        <!-- end /.footer -->
+
+                    </form>
+
+                </div>
+            </section>
+        </article>
+   	</div>
+   	<% include layouts/footer %>
+    <a class="go-top go-top-circle" href="javascript:void(0)"> <i class="fa fa-angle-up"></i> </a>
+	<% include layouts/javascripts %>
+</body>

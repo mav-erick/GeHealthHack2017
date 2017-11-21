@@ -1,0 +1,98 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<% include layouts/head  %>
+
+<body class="transparent-header pace-on pace-dot">
+   	<div id="content" role="main">
+   		<% include layouts/header %>
+        <article>
+            <section class="section">
+                <div class="background-overlay" style="background-color: rgba(48,60,64,1);"></div>
+                <div class="container-fullwidth">
+                    <div class="row">
+                        <div class="col-md-12 element-top-100 element-bottom-0">
+                            <div class="google-map" id="map" style="height:400px"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="text-center element-top-80 element-bottom-20 os-animation normal" data-os-animation="fadeIn" data-os-animation-delay="0s"> Get in touch </h1>
+                            <div class="divider-border divider-border-center element-top-20 element-bottom-20 os-animation" data-os-animation="fadeIn" data-os-animation-delay="0s">
+                                <div class="divider-border-inner"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <h2 class="text-center center element-top-20 element-bottom-40 os-animation light" data-os-animation="fadeIn" data-os-animation-delay="0.3s"> Zulu is a service providing agency linking the everyday workforce to the consumer base. We are located on an isolated island and we mind our own business. </h2>
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <form action="http://lambdahtml.oxygenna.com/contact_mailer.php" class="contact-form">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group form-icon-group"> <i class="fa fa-user"></i> <input class="form-control" id="name" name="name" placeholder="Your name *" type="text" required=""> </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group form-icon-group"> <i class="fa fa-envelope"></i> <input class="form-control" id="email" name="email" placeholder="Your email *" type="email" required=""> </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group form-icon-group"> <i class="fa fa-pencil"></i> <textarea class="form-control" id="message" name="message" placeholder="Your message" rows="10" required=""></textarea> </div>
+                                        <div class="text-center"> <input type="submit" value="Send email" class="btn btn-primary"> </div>
+                                        <div class="messages text-center"></div>
+                                    </form>
+                                    <div class="divider-wrapper">
+                                        <div class="visible-xs element-height-80"></div>
+                                        <div class="visible-sm element-height-80"></div>
+                                        <div class="visible-md element-height-80"></div>
+                                        <div class="visible-lg element-height-80"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+   		<% include layouts/footer %>
+    </div>
+    <a class="go-top go-top-circle" href="javascript:void(0)"> <i class="fa fa-angle-up"></i> </a>
+
+    <script type="text/javascript">
+        var oxyThemeData = {
+            navbarHeight: 100,
+            navbarScrolled: 60,
+            navbarScrolledPoint: 20,
+            menuClose: 'off',
+            scrollFinishedMessage: 'No more items to load.',
+            hoverMenu:
+            {
+                hoverActive: true,
+                hoverDelay: 1,
+                hoverFadeDelay: 200
+            },
+            siteLoader: 'on'
+        };
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize"></script>
+    <script src="javascripts/theme.min.js"></script>
+    <script src="javascripts/contact.min.js"></script>
+     <script src="javascripts/map.min.js"></script>
+    <script>
+        window.map = {"featureType":"all","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"all","elementType":"labels","stylers":[{"visibility":"off"},{"saturation":"-100"}]},{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40},{"visibility":"off"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"off"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#4d6059"}]},{"featureType":"landscape","elementType":"geometry.stroke","stylers":[{"color":"#4d6059"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"color":"#4d6059"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"lightness":21}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"color":"#4d6059"}]},{"featureType":"poi","elementType":"geometry.stroke","stylers":[{"color":"#4d6059"}]},{"featureType":"road","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#7f8d89"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#7f8d89"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#7f8d89"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#7f8d89"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#7f8d89"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#7f8d89"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"#7f8d89"}]},{"featureType":"road.local","elementType":"geometry.stroke","stylers":[{"color":"#7f8d89"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#2b3638"},{"visibility":"on"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#2b3638"},{"lightness":17}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#24282b"}]},{"featureType":"water","elementType":"geometry.stroke","stylers":[{"color":"#24282b"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels.icon","stylers":[{"visibility":"off"}]}]
+        };
+    </script>
+   
+</body>
+
+
+</html>
